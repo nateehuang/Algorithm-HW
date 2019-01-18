@@ -6,8 +6,7 @@ Segment = namedtuple('Segment', 'start end')
 
 def optimal_points(segments):
     points = []
-    #write your code here
-    #low_pt = [s.start for s in segments]
+
     high_pt = [s.end for s in segments]
     index = high_pt.index(min(high_pt))
     p = high_pt[index]
@@ -33,11 +32,6 @@ def optimal_points(segments):
 
 
 
-
-    #for s in segments:
-        #points.append(s.start)
-        #points.append(s.end)
-    #return points
 
 if __name__ == '__main__':
     input = sys.stdin.read()
