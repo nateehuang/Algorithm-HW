@@ -3,7 +3,7 @@ import sys
 
 def optimal_summands(n):
     summands = []
-    #write your code here
+
     if n==2:
         return [2]
     else:
@@ -19,23 +19,7 @@ def optimal_summands(n):
             else:
                 summands.append(remain)
                 remain = 0
-            #for i in range(last+1, remain+1):
-                #if remain - i >last:
-                    #summands.append(i)
-                    #remain -= i
-                    #last = i
-                #elif remain == i:
-                    #summands.append(i)
-                    #return summands
-
-
-    #if n>1:
-        #last = summands[len(summands)-1]
-        #for i in range(n):
-            #if remain-i<=last:
-                #remain = remain - i + 1
-                #summands.append(i-1)
-
+  
     return summands
 
 if __name__ == '__main__':
