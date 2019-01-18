@@ -8,7 +8,7 @@ def get_number_of_inversions(a, b, left, right):
     ave = (left + right) // 2
     number_of_inversions += get_number_of_inversions(a, b, left, ave)
     number_of_inversions += get_number_of_inversions(a, b, ave, right)
-    #write your code here
+
     b = a[:]
     i = left
     j = ave
@@ -25,9 +25,7 @@ def get_number_of_inversions(a, b, left, right):
         if j == right:
             a[k:right] = b[i:ave]
             break
-    #print('b:', b[left:right])
-    #print('a', a[left:right])
-    #print('end number_of_inversions:', number_of_inversions)
+
     return number_of_inversions
 
 def get_number_naive(a, left, right):
@@ -36,8 +34,7 @@ def get_number_naive(a, left, right):
         for j in range(i+1, right):
             if a[i] > a[j]:
                 number_of_inversions+=1
-                #a[i], a[j] = a[j], a[i]
-    #print('naive a after:', a)
+
     return number_of_inversions
 
 if __name__ == '__main__':
