@@ -40,16 +40,16 @@ def search(ary, pt, way):
 
 def fast_count_segments(starts, ends, points):
     cnt = [0] * len(points)
-    #write your code here
+
     starts.sort()
     ends.sort()
     length = len(points)
     for i in range(length):
         p = points[i]
         l = search(starts, p, 'left')
-        #print('l:', l)
+
         r = search(ends, p, 'right')
-        #print('r:', r)
+
         cnt[i] = l + r - len(starts)
 
     return cnt
